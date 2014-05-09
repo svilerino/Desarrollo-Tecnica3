@@ -1,0 +1,7 @@
+Evaluación: 
+	Realizar un aplicación que reciba una oración comprimida, y a través de funciones, la descomprima 
+para ser mostrada, muestre la cantidad de palabras que la conforman, la cantidad de vocales y la cantidad de 
+consonantes. La compresión consiste en reemplazar una letra por el número de veces que se repite y mostrar 
+la letra una sola vez. Ejemplos: "El pe2ro no c2ordina" (oración comprimida recibida) -> El perro no coordina (oración descomprimida mostrada); "2e3i -> eeiii".
+Guardar la aplicación como 2Eva1Trim, en carpeta del mismo nombre, poniendo este enunciado a manera de
+comentario al principio del código, junto a los datos del alumno. Poner nombre de la aplicación en la solapa del Form.

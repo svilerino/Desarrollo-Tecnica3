@@ -1,0 +1,15 @@
+\item Promedio $ \longrightarrow  \bar X = 0.5326296892822701 $ 
+ \item Dispersión $ \longrightarrow \sigma^2 = 0.09269363308858188 $ 
+Histograma:
+\item Intervalo $ \left( 0.0 ; 0.1 \right)= 126725 $
+\item Intervalo $ \left( 0.1 ; 0.2 \right)= 56370 $
+\item Intervalo $ \left( 0.2 ; 0.3 \right)= 70442 $
+\item Intervalo $ \left( 0.3 ; 0.4 \right)= 112656 $
+\item Intervalo $ \left( 0.4 ; 0.5 \right)= 84528 $
+\item Intervalo $ \left( 0.5 ; 0.6 \right)= 56373 $
+\item Intervalo $ \left( 0.6 ; 0.7 \right)= 140824 $
+\item Intervalo $ \left( 0.7 ; 0.8 \right)= 98605 $
+\item Intervalo $ \left( 0.8 ; 0.9 \right)= 112684 $
+\item Intervalo $ \left( 0.9 ; 1.0 \right)= 140793 $
+\item Frecuencia Promedio $ \longrightarrow \bar f = 100000 $
+\item Dispersión del Histograma $ \longrightarrow \sigma^2_{freq. hist.} = 9.287847844E8

@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1256577617 source:/home/labo22a05/Trim3/labo22axx-e1-t3/Matriz.cpp
+	"Matriz.h"
+	<time.h>
+	<stdlib.h>
+	<iostream>
+
+1256580832 /home/labo22a05/Trim3/labo22axx-e1-t3/Matriz.h
+
+1256584749 source:/home/labo22a05/Trim3/labo22axx-e1-t3/main.cpp
+	<iostream>
+	"Matriz.h"
+	<stdlib.h>
+	<X11/Xlib.h>
+	<string.h>
+

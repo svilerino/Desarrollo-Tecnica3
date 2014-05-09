@@ -1,0 +1,128 @@
+\documentclass[12pt,a4paper,titlepage,spanish]{article} 
+\usepackage{babel}
+\usepackage [T1]{fontenc}
+\usepackage [latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{array}
+\usepackage{cancel}
+%\usepackage{arcs}
+\usepackage[usenames,dvipsnames]{color}
+
+	  \oddsidemargin 0in
+      \textwidth 6.75in
+      \topmargin 0in
+      \textheight 10.0in
+      \parindent 0em
+      \parskip 2ex
+\usepackage{anysize}
+\marginsize{3cm}{2cm}{1.0cm}{1.0cm}
+\pagestyle{plain}
+\title{
+\begin{Large}
+ \begin{center}
+		\underline{Informe simulaciones TP04 - GNA Congruencial de 3 semillas}\\
+		\underline{Curso: } 6to 1ra\\
+		\underline{Turno: } Noche\\
+		\underline{CPU: } Intel Core 2 Duo E6600\\
+      \end{center}
+\end{Large}
+}
+\author{Vileriño, Silvio}
+
+\begin{document}
+\maketitle
+\setcounter{page}{2}
+\tableofcontents
+\newpage
+
+\subsection{Introducción}
+Esta simulación se desarrolla con el fin de comprobar la calidad del generador de numeros aleatorios (GNA) denominado Congruencial Lineal.\\
+Su fórmula es: $ X_n= \frac{\frac{\alpha_n}{M_1} + \frac{\beta_n}{M_2} + \frac{\gamma_n}{M_3}}{3} $\\
+$ \alpha_n= \left( a_1 \alpha_{n-1} + b_1 \right) \textrm{ mod } M_1$\\
+$ \beta_n= \left( a_2 \beta_{n-1} + b_2 \right) \textrm{ mod } M_2 $\\
+$ \beta_n= \left( a_3 \gamma_{n-1} + b_3 \right)  \textrm{ mod } M_3$\\
+Los valores calibrados son los siguientes (Todos números primos de gran magnitud):
+\begin{itemize}
+	\item $ \alpha $ \begin{itemize}
+								\item A=1865471
+								\item B=1999993
+							\end{itemize}
+	\item $ \beta $ \begin{itemize}
+								\item A=1865533
+								\item B=1999275
+							\end{itemize}
+	\item $ \gamma $ \begin{itemize}
+								\item A=1865893
+								\item B=1999817
+							\end{itemize}
+	\item $ M_{1,2,3}=10^6 $
+\end{itemize}
+Las semillas iniciales $ \alpha $, $ \beta $ y $ \gamma $ son tomadas al azar por la funcion GNA del lenguaje Java .\\
+\newpage
+\subsection{Análisis}
+Al GNA se le realizan las siguientes pruebas:\\
+\begin{itemize}
+	\item Se calcula un promedio $ \bar X $ de 1000000 números generados al azar.\\
+		$ \bar X = \frac{\displaystyle{\sum_{k=1}^n} {a_k}}{n}, n=1000000 $
+	\item Se calcula la dispersión $ \sigma^2 $ entre cada número generado y el promedio obtenido anteriormente.\\
+		$ \sigma^2 = \frac{\displaystyle{\sum_{i=1}^n {(X_i - \bar X)^2}}}{n}, n=1000000, \bar X \longrightarrow $ promedio
+	\item Se confecciona un histograma donde se registran la cantidad de números generados entre 0,0 exclusive y 0,1 exclusive, en 10 intervalos de 0,1
+	\item Se calcula $ \bar f $, la frecuencia promedio de los intervalos.\\
+	$ \bar f=\frac{\displaystyle{\sum_{i=1}^n {k_i}}}{n},n=10, k_i \longrightarrow $ frecuencia registrada en cada intervalo.
+	\item Se calcula la dispersion $ \sigma^2_{hist} $ entre las frecuencias del histograma y la frecuencia promedio obtenida anteriormente\\
+	 $ \sigma^2_{hist}=\frac{\displaystyle{\sum_{i=1}^n {(F_i - \bar f)^2}}}{n}, n=10 $
+	 \item Se realizan dos pruebas gráficas en las que se generan 250000 puntos al azar en un área de $ 500 \times 500 $ píxeles. \begin{itemize}
+	 											\item Paralelo: se toman dos GNA con distinta semilla , para x e y .
+	 											\item Serie: se toman dos GNA y se mantiene esta relación para la generación de valores de x e y :$ x=GNA(GNA(x)) $, previamente x siendo la semilla inicial.
+	 												 											
+	 										\end{itemize}
+\end{itemize}
+\newpage
+\subsection{Resultados Analíticos}
+Luego de realizar la simulación, se obtuvieron los siguientes resultados: \\
+
+\begin{itemize}
+\item Promedio $ \longrightarrow  \bar X = 0.4999497401833184 $ 
+ \item Dispersión $ \longrightarrow \sigma^2 = 0.027776683385716264 $ 
+\item Histograma: \begin{itemize}	
+			\item Intervalo $ \left( 0.0 ; 0.1 \right)= 4428 $
+			\item Intervalo $ \left[ 0.1 ; 0.2 \right)= 31596 $
+			\item Intervalo $ \left[ 0.2 ; 0.3 \right)= 85536 $
+			\item Intervalo $ \left[ 0.3 ; 0.4 \right)= 162275 $
+			\item Intervalo $ \left[ 0.4 ; 0.5 \right)= 216269 $
+			\item Intervalo $ \left[ 0.5 ; 0.6 \right)= 216146 $
+			\item Intervalo $ \left[ 0.6 ; 0.7 \right)= 162562 $
+			\item Intervalo $ \left[ 0.7 ; 0.8 \right)= 85189 $
+			\item Intervalo $ \left[ 0.8 ; 0.9 \right)= 31394 $
+			\item Intervalo $ \left[ 0.9 ; 1.0 \right)= 4605 $
+		\end{itemize}
+\item Frecuencia Promedio $ \longrightarrow \bar f = 100000 $
+\item Dispersión del Histograma $ \longrightarrow \sigma^2_{freq. hist.} = 6.2849229824 \times 10^{9} $
+\end{itemize}
+\newpage
+
+\subsection{Resultados Gráficos}
+\underline{Histograma}\\
+\begin{center}
+	\includegraphics[scale=0.75]{images/Histograma.jpg}
+\end{center}
+\newpage
+\underline{Test Gráfico Paralelo}
+\begin{center}
+	\includegraphics[scale=0.75]{images/Paralelo.jpg}
+\end{center}
+\newpage
+\underline{Test Gráfico Serie}
+\begin{center}
+	\includegraphics[scale=0.75]{images/Serie.jpg}
+\end{center}
+\newpage
+\subsection{Conclusión}
+Se puede observar que los $ \alpha $, $ \beta $ y $ \gamma $ individualmente, son buenos generadores, pero el modelo de las 3 semillas, arroja resultados irregulares y una cantidad de puntos concentrados en ciertos intervalos, si bien el promedio es bueno (se acerca a $ \frac{1}{2} $), y la dispersión es bastante cercana a la denominada buena $ 0.08\dots $, la dispersión del histograma, es muy alta. Estos resultados en conjunto hacen evidente, que el modelo congruencial de 3 semillas es un mal GNA.
+\end{document}

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1252098236 source:/home/labo22a05/Trim2/labo22a05-tp03-t2/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

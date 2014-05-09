@@ -1,0 +1,12 @@
+Evaluación:
+Una aplicación, deberá permitir hacer ABM de productos, donde lo que se almacena es: Nombre, Precio, y Fecha de
+vencimiento.
+El Nombre no debe superar los 10 caracteres, y el Precio los dos decimales, por lo que esos datos deben ser validados por
+la aplicación. En todo momento, se debereá mostrar en una lista el contenido del archivo ordanado por Precio en forma
+descendente. Un botón deberá levantar una fecha ingresada por el usuario y dar de baja a los productos vencidos. Serán
+aquellos donde la fecha de vencimiento es estrictamente menor a la ingresada.
+Poner dartos del alumno y enunciado al principio del código.
+Poner titulo en la solapa del o de los Forms.
+Guardar como 1eva3trim en carpeta homónima en el raíz de la cuenta del alumno.
+Usar el objeto App.
+_________________________________________

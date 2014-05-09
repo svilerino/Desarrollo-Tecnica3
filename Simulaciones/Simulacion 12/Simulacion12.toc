@@ -1,0 +1,8 @@
+\select@language {spanish}
+\contentsline {subsection}{\numberline {0.1}Introducci\'on}{3}
+\contentsline {subsection}{\numberline {0.2}Generaci\'on}{3}
+\contentsline {subsection}{\numberline {0.3}Adaptaci\'on funcional}{3}
+\contentsline {subsection}{\numberline {0.4}Cruza}{3}
+\contentsline {subsection}{\numberline {0.5}Mutaci\'on}{3}
+\contentsline {subsection}{\numberline {0.6}Resultados}{4}
+\contentsline {subsection}{\numberline {0.7}Conclusi\'on}{6}

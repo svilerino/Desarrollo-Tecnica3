@@ -1,0 +1,4 @@
+[301715, 176216, 124880, 96827, 78927, 66851, 58002, 50777, 45805, 0]
+Total Numeros Generados: 8996779
+Total Numeros Admitidos: 1000000
+Total Numeros Rechazados: 7996779

@@ -1,0 +1,104 @@
+\documentclass[12pt,a4paper,titlepage,spanish]{article} 
+\usepackage{babel}
+\usepackage [T1]{fontenc}
+\usepackage [latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{array}
+\usepackage{cancel}
+%\usepackage{arcs}
+\usepackage[usenames,dvipsnames]{color}
+	  \oddsidemargin 0in
+      \textwidth 6.75in
+      \topmargin 0in
+      \textheight 10.0in
+      \parindent 0em
+      \parskip 2ex
+\usepackage{anysize}
+\marginsize{3cm}{2cm}{1.0cm}{1.0cm}
+\pagestyle{plain}
+\title{
+\begin{Large}
+ \begin{center}
+		\underline{Informe Simulaciones TP12: Modelo Código genético} \\
+		\underline{Curso: } 6to 1ra\\
+		\underline{Turno: } Noche\\
+		\underline{CPU: } Intel Core 2 Duo E6600\\
+      \end{center}
+\end{Large}
+}
+\author{Vileriño, Silvio}
+
+\begin{document}
+\maketitle
+\setcounter{page}{2}
+\tableofcontents
+\newpage
+
+\subsection{Introducción}
+\begin{center}
+Se procede a simular un modelo de código genético que consiste en un ciclo de 4 partes:
+\begin{itemize}
+	\item a.- Generación
+	\item b.- Adaptación
+	\item c.- Cruza
+	\item d.- Mutación
+\end{itemize}
+\subsection{Generación}
+Sean $ N $ valores de X con $ X \in \mathbb{N} / 0 \leq X \leq 255 $ (8 bits en este caso)
+Se toma una cadena de 8 bits como el ADN de los $ N $ especímenes de la población generada.
+\subsection{Adaptación funcional}
+sea $ f(x)=x $ una función de adaptación o una función ambiente que indica que bichos sobreviven:
+\begin{itemize}
+	\item Valores que maximizan $ y=f(x) $ sobreviven
+	\item Valores que minimizan $ y=f(x) $ mueren
+\end{itemize}
+Se utilizó el modelo numérico, utilizando redondeo y métodos de control para asegurar la población total de N especímenes.
+Se implemento la adaptación con el método de las operaciones matemáticas y los controles de redondeo(no método de colas).
+Sea $ F=\displaystyle\sum_{i=1}^{n} Especimen_i $ y $ N $ el total de especímenes en la población:
+Esperanza de vida de $ Especimen_i = $  $ \frac{f(Especimen_i)}{F} $ que da un valor entre 0 y 1, si multiplicamos dicho valor por $ N $ 
+obtenemos la cantidad total de especímenes de ese tipo.
+\subsection{Cruza}
+Para realizar la cruza se toman dos especímenes al azar $ \alpha $ y $ \beta $ y se les swappea una porción de la cadena de su ADN entre ellos.\\
+Esto da lugar a nuevas especies.
+\subsection{Mutación}
+Sea  $ M \in \mathbb{R} / 0 < X < 1 $ Se producirá una mutación $ \longleftrightarrow $ $ X < 10^{-8} $
+La mutación consiste en invertir un bit $ (0 \rightarrow 1 ) $ o $ (1 \rightarrow 0 ) $ elegido al azar de la cadena de ADN de un especímen también elegido al azar.
+\end{center}
+\subsection{Resultados}
+Luego de realizar la simulación, se obtuvieron los siguientes resultados: \\
+\begin{itemize}
+	\item Thu Oct 28 23:06:18 GFT 2010   -  Program Started.
+	\item Thu Oct 28 23:06:18 GFT 2010   -  Simulation Started.
+    \item	 Initial Total Poblation: 100000
+	\item Thu Oct 28 23:06:19 GFT 2010   -  InitialPoblation File Creation Ended.
+	\item Fri Oct 29 05:06:18 GFT 2010   -  MidPoblation File Creation Ended.
+	\item Fri Oct 29 11:06:18 GFT 2010   -  Simulation Ended.	
+	\item Fri Oct 29 11:06:19 GFT 2010   -  FinalPoblation File Creation Ended.
+	\item Fri Oct 29 11:06:19 GFT 2010   -  Histograms File Creation Ended.
+	\item Mutation Count: 4
+	\item Final Total Poblation: 100000
+\end{itemize}
+\begin{center}
+	Histograma inicial\\
+	\includegraphics[scale=1.00]{images/inicial.jpg}
+\end{center}
+\newpage
+\begin{center}
+    Histograma intermedio\\
+	\includegraphics[scale=1.00]{images/intermedio.jpg}
+\end{center}
+\begin{center}
+    Histograma final\\
+	\includegraphics[scale=1.00]{images/final.jpg}
+\end{center}
+\newpage
+\subsection{Conclusión}
+Se puede observar que luego de un tiempo, se acentúa la población de los especímenes mas fuertes o con mas valor, y que los de valores pequeños desaparece por completo.
+Las mutaciones, provocan cambios repentinos en la población.
+\end{document}

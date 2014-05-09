@@ -1,0 +1,7 @@
+Evaluación:
+Un diagrama de barras apiladas, consta de barras donde cada una tiene una longitud igual al dato que representa como en un histograma. En este caso, las barras están puestas una encima o al lado de la otra, formando segmentos consecutivos de diferentes colores o patrones de una sola barra de longitud L.
+Sabiendo esto, hacer una aplicación que tome 5 valores enteros ingresados por el usuario, y haga el diagrama de barras apiladas correspondiente.
+El usuario podrá elegir los colores de cada barra, guardandose en un archivo, los valores ingresados y el color de graficación de cada uno para ser mostrado en una lista cuando el usuario lo desee.
+Guardar como 3eva3trim en carpeta del mimsmo nombre, con enunciado y datos del alumno a manera de comentario en el código y título en la solapa del Form.
+Usar el objeto App en al manejo de archivos.
+///

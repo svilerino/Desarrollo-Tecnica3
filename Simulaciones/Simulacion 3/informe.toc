@@ -1,0 +1,7 @@
+\select@language {spanish}
+\contentsline {subsection}{\numberline {0.1}Introducci\'on}{3}
+\contentsline {subsection}{\numberline {0.2}Resultados GNA Cadena de Caracteres}{4}
+\contentsline {subsection}{\numberline {0.3}Resultados GNA Num\'erico}{5}
+\contentsline {subsection}{\numberline {0.4}Im\'agenes Cadenas de caracteres}{6}
+\contentsline {subsection}{\numberline {0.5}Im\'agenes Num\'erico}{9}
+\contentsline {subsection}{\numberline {0.6}Conclusi\'on}{12}

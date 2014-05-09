@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1257539596 source:/home/labo22a05/Trim3/labo22a05-tp05-t3/main.cpp
+	<iostream>
+	<stdlib.h>
+	<X11/Xlib.h>
+	<string.h>
+

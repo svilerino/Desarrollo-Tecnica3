@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1250891364 source:/home/labo22a05/Trim2/labo22a05-e2-t2/main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
+1250891364 source:g:\colegio 5to\laboratorio ii\labo22a05\trim2\labo22a05-e2-t2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+

@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1256938602 source:/home/labo22a05/Trim3/labo22a05-tp03-t3/Cuadrado.cpp
+	"Cuadrado.h"
+
+1256938890 /home/labo22a05/Trim3/labo22a05-tp03-t3/Cuadrado.h
+	"Poligono.h"
+
+1256938115 /home/labo22a05/Trim3/labo22a05-tp03-t3/Poligono.h
+
+1257537265 source:/home/labo22a05/Trim3/labo22a05-tp03-t3/Poligono.cpp
+	"Poligono.h"
+	<X11/Xlib.h>
+	<iostream>
+	<stdlib.h>
+	<math.h>
+
+1256938602 source:/home/labo22a05/Trim3/labo22a05-tp03-t3/Triangulo.cpp
+	"Triangulo.h"
+
+1256938890 /home/labo22a05/Trim3/labo22a05-tp03-t3/Triangulo.h
+	"Poligono.h"
+
+1257183841 source:/home/labo22a05/Trim3/labo22a05-tp03-t3/main.cpp
+	<iostream>
+	<stdlib.h>
+	"Triangulo.h"
+	"Cuadrado.h"
+

@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1257536466 source:/home/labo22a05/Trim3/labo22a05-tp01-t3/Poligono.cpp
+	"Poligono.h"
+	<X11/Xlib.h>
+	<iostream>
+	<stdlib.h>
+	<math.h>
+
+1254764839 /home/labo22a05/Trim3/labo22a05-tp01-t3/Poligono.h
+
+1256932121 source:/home/labo22a05/Trim3/labo22a05-tp01-t3/main.cpp
+	<iostream>
+	"Poligono.h"
+	<stdlib.h>
+

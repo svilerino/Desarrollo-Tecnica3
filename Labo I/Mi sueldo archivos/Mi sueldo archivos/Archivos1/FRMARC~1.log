@@ -1,0 +1,15 @@
+Line 20: Class MSComCtl2.DTPicker of control txtFecha was not a loaded control class.
+Line 68: Class MSComctlLib.StatusBar of control SBar was not a loaded control class.
+Line 364: Class MSComDlg.CommonDialog of control cdVentana was not a loaded control class.
+Line 26: The property name _ExtentX in txtFecha is invalid.
+Line 27: The property name _ExtentY in txtFecha is invalid.
+Line 28: The property name _Version in txtFecha is invalid.
+Line 29: The property name Format in txtFecha is invalid.
+Line 30: The property name CurrentDate in txtFecha is invalid.
+Line 75: The property name _ExtentX in SBar is invalid.
+Line 76: The property name _ExtentY in SBar is invalid.
+Line 77: The property name _Version in SBar is invalid.
+Line 100: The property name Panels in SBar is invalid.
+Line 367: The property name _ExtentX in cdVentana is invalid.
+Line 368: The property name _ExtentY in cdVentana is invalid.
+Line 369: The property name _Version in cdVentana is invalid.

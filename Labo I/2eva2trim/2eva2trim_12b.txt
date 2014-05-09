@@ -1,0 +1,10 @@
+Evaluación: 
+Llenar una matriz cuadrada de 5 filas con enteros al azar sin repetir entre 0 y 30. Se la deberá 
+mostrar con los elementos comprendidos entre el mayor y el menor, ordenados por columnas. 
+La matriz quedará completamente ordenada por columnas, sólo en el caso en que el menor elemento sea el (0,0) y el mayor (4,4).
+Poner datos del alumno y este eunuciado a manera de comentario al comienzo del código.
+Poner título en la solapa de la aplicación.
+Guardar como 2eva2trim en una carpeta del mismo nombre dentro del raiz de la cuenta de 
+usuario.
+----------------------------------------------------------------------------------------------------------------
+

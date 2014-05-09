@@ -1,0 +1,42 @@
+Evaluación de laboratorio II - Grupo A (2/3)
+
+---------------------------------------------------------------------------------------------
+Apellido/s, Nombre/s:
+
+Cuenta:
+---------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------
+Enunciado:
+---------------------------------------------------------------------------------------------
+Hacer un programa que permita almacenar en un archivo binario de nombre "Alumnos.dat", los
+siguientes datos de los alumnos de un curso:
+
+	DNI
+	Apellido
+	Nombre
+	Curso
+	División
+
+y en un segundo archivo binario las notas obtenidas en cada trimestre en cada materia,
+debiendo cada registro respetar la siguiente estructura:
+
+	DNI
+	MATERIA
+	T1
+	T2
+	T3
+
+- El programa deberá hacer las altas del archivo de alumnos, y generar las notas de manera
+  aleatoria, tomando el nombre de la materia de un archivo de texto que contiene las materias.
+- Mostrar la lista de aprobados, diciembre y marzo de una materia seleccionada por el usuario.
+  y los porcentajes para cada grupo.
+- Mostrar las notas de todas las materias de un alumno determinado por el usuario.
+
+---------------------------------------------------------------------------------------------
+Crear el proyecto con el nombre labo22axx-e2-t2 (debiendo reemplazar las xx por el número
+de cuenta. Excluyente).
+Enviar la carpeta completa comprimida al mail sdilabo@gmail.com colocando el nombre del
+proyecto como asunto, y copiando el texto contenido en el archivo .c en el cuerpo del mail.
+---------------------------------------------------------------------------------------------
+

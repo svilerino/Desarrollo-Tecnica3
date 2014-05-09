@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1257539788 source:/home/labo22a05/Trim3/labo22a05-tp06-t3/Lista.cpp
+	<stdlib.h>
+	<stdio.h>
+	<iostream>
+	"Lista.h"
+	"Nodo.h"
+	<X11/Xlib.h>
+	<string.h>
+
+1257185338 /home/labo22a05/Trim3/labo22a05-tp06-t3/Lista.h
+	"Nodo.h"
+
+1256939983 /home/labo22a05/Trim3/labo22a05-tp06-t3/Nodo.h
+
+1256940257 source:/home/labo22a05/Trim3/labo22a05-tp06-t3/Nodo.cpp
+	<stdlib.h>
+	"Nodo.h"
+
+1257186045 source:/home/labo22a05/Trim3/labo22a05-tp06-t3/main.cpp
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	"Lista.h"
+

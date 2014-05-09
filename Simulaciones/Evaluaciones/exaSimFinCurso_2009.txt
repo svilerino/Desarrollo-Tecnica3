@@ -1,0 +1,17 @@
+Hacer:
+1.	Si se generan N valores reales al azar, donde cada uno de ellos es la suma de M valores reales a azar, decir ¿Cuánto es la dispersión y promedio de los N valores generados, si la dispesión y promedio de los M valores usados para cada N es de 0,03 y 3 respectivamente? - Justificar la respuesta - 
+
+2.	Explique una manera de generar aleaotrios en un intervalo (a, b) con distribución f(x) = e^(-x^2).
+
+3.	Demostrar que el error relativo en al área de un rectángulo, es la suma de los errores relativos en cada medida.
+
+4.	Demostrar que si un GNA tiene período, entonces el GNA arranca dentro de ese período.
+
+5.	Decir si se puede predecir el un período en von neumann - justificar la respuesta - . 
+
+6.	Demostrar que si la diferencia entre datos observados y esperados es constante, el error estadístico es esa constante.
+
+7.	Decir si se puede hacer algún estudio para saber el tipo de GNA usado en una familia de aleatorios reales.
+------------------------------------------------------------------------///.
+
+

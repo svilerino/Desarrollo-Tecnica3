@@ -1,0 +1,6 @@
+\select@language {spanish}
+\contentsline {subsection}{\numberline {0.1}Introducci\'on}{3}
+\contentsline {subsection}{\numberline {0.2}An\'alisis}{4}
+\contentsline {subsection}{\numberline {0.3}Resultados Anal\IeC {\'\i }ticos}{5}
+\contentsline {subsection}{\numberline {0.4}Resultados Gr\'aficos}{6}
+\contentsline {subsection}{\numberline {0.5}Conclusi\'on}{9}

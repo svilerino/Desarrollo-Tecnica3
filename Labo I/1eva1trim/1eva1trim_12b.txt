@@ -1,0 +1,6 @@
+Evaluación: 
+	Hacer una aplicaión que pase a geringoso una palabra escrita por el usuario.
+Ejemplo: Si se ingresa Hola, se deberá mostrar Hopolapa, si se ingresa perro, sale peperropo.
+Guardar la aplicación con el nombre "1eva1trim" en una carpeta con el mismo nombre en la cuenta del usuario.
+Mostrar el nombre de la aplicación enla solapa de Form.
+Poner este enunciado en el General de Form, debajo del Option Explicit, junto a los datos del alumno.

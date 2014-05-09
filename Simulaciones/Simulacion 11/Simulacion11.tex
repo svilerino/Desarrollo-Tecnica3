@@ -1,0 +1,89 @@
+\documentclass[12pt,a4paper,titlepage,spanish]{article} 
+\usepackage{babel}
+\usepackage [T1]{fontenc}
+\usepackage [latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{array}
+\usepackage{cancel}
+%\usepackage{arcs}
+\usepackage[usenames,dvipsnames]{color}
+	  \oddsidemargin 0in
+      \textwidth 6.75in
+      \topmargin 0in
+      \textheight 10.0in
+      \parindent 0em
+      \parskip 2ex
+\usepackage{anysize}
+\marginsize{3cm}{2cm}{1.0cm}{1.0cm}
+\pagestyle{plain}
+\title{
+\begin{Large}
+ \begin{center}
+		\underline{Informe Simulaciones TP11: Método de rechazo} \\
+		\underline{Generación de números aleatorios con distribuciones no uniformes}\\
+		\underline{Curso: } 6to 1ra\\
+		\underline{Turno: } Noche\\
+		\underline{CPU: } Intel Core 2 Duo E6600\\
+      \end{center}
+\end{Large}
+}
+\author{Vileriño, Silvio}
+
+\begin{document}
+\maketitle
+\setcounter{page}{2}
+\tableofcontents
+\newpage
+
+\subsection{Introducción}
+En esta simulación se utiliza el método de rechazo para generar números aleatorios con distribución no uniforme. Este método, a diferencia del anterior (Transformada Inversa), permite hallar funciones distribución no integrables analíticamente,
+o funciones trascendenales (funciones donde no se puede despejar la $ X $ como por ejemplo $ x^2 = \cos X $ ).
+
+\begin{equation*}
+	\\Sea\left\lbrace
+	  \begin{array}{l}
+		\text{$ f(x) $ una función definida en el intervalo } [ \alpha, \beta ] \\
+		\text{$ x $ } \in \mathbb{R_a}  [ \alpha, \beta ]\\
+	  \end{array}
+	  \right.
+\end{equation*}
+Se desean generar $ K $ números aleatorios donde $ \alpha=1 $ , $ \beta=10 $ dando un intervalo $ [1, 10] $ con una función de distribución o reparto del tipo $ f(x)=\frac{1}{x} $, de forma que la distribución quede dada por $ f(x) $ y el
+histograma adquiera la siguiente forma:\\
+\begin{center}
+	\includegraphics[scale=0.75]{images/Distribucion-1x.JPG}
+\end{center}
+
+Se procede a calcular $ N $, que indica la cantidad de puntos en un intervalo(estadísticamente).
+\begin{center}
+ $ N=\int_\alpha^{\beta}\frac{1}{x} \: dx $
+\end{center} 
+Una vez calculado $ N $, se calcula la función normalizada $ g(x)=\frac{f(x)}{N} $, la cual nos dá la probabilidad de aparicion de x.
+El método de rechazo consiste en la generación de un número al azar en un intervalo $ [\alpha, \beta] $ y además, la generación de un discriminante en el intervalo $ [0,1] $, que servirá como ruleta para la selección de los números aleatorios.
+Si $ Rnd\leq g(x) $, el número es contado como válido, de no ser así, se repite la operación hasta lograr $ K $ números. En este caso, se pide llevar una cuenta, de números generados, números admitidos y números rechazados.
+
+Función $ g(x) $
+\begin{center}
+\textcolor{green}{$ y=\frac{1}{ \log(\beta) . x} $}
+\end{center}
+Luego de realizar la simulación, se obtuvieron los siguientes resultados: \\
+\begin{itemize}
+	\item Funcion $ f(x)=\frac{1}{x} $
+	\item Intervalo $ [1, 10] $
+	\item	Total Numeros Generados: 9007211
+	\item Total Numeros Admitidos: 1000000
+	\item Total Numeros Rechazados: 8007211
+\end{itemize}
+\begin{center}
+	\includegraphics[scale=0.50]{images/Histograma.jpg}
+\end{center}
+\newpage
+\subsection{Conclusión}
+Se comprueba que por medio de este método se pueden obtener distribuciones en función de una transformada cualquiera, \underline{sin importar si la función no es integrable analíticamente} \\
+\underline{ y/o trasncendental}, en este caso se pide la función $ f(x)=\frac{1}{x} $. Es un método efectivo, pero en comparación con el método de la transformada inversa, solo debería utilizarse cuando realmente es necesario, ya que el costo computacional es casi 10 veces mayor. 
+\end{document}

@@ -1,0 +1,8 @@
+Hacer una aplicación que encuentre graficamente la intersección entre dos parábolas con exactitud de 2 decimales.
+Una parábola es de la forma y= A*x^2, y la otra y= -A*x^2 + B; donde el usuario ingresa el valor de las constantes A y B.
+Hacer el análisis en el intervalo -20, 20 tanto para las abscisas como para las ordenadas.
+De haber intersecciones en esos intervalos, se deberá guardar en un archivo el valor de A y las coordenadas de las intersecciones.
+Un botón deberá mostrar en una lista el contenido del archivo cuando el usuario lo desee
+Guardar el proyecto como 2eva3trim en carpeta del mismo nombre en el raiz de la cuenta del alumno.
+Poner sus datos y enunciado al principio del código de la aplicación, además de título en la solapa de Form.
+///

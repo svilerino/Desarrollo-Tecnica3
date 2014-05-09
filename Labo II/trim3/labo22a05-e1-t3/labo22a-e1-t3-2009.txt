@@ -1,0 +1,99 @@
+--------------------------------------------------------------------------------
+Evaluación de Laboratorio II - 3er. Trimestre - Grupo A
+--------------------------------------------------------------------------------
+Enunciado:
+---------
+
+Hacer un programa que permita implementar una lista simplemente encadenada,
+donde el área de datos estará compuesta por un objeto de la clase Matriz.
+
+En la lista se deberán hacer las inserciones de los nodos de manera ordenada por
+la suma de todos los elementos de la matriz existente como propiedad de la clase
+Matriz. Dicha suma la proporcionará el método << int obtenerSuma(); >>. La 
+matriz en todos los casos deberá ser de 3 filas por 3 columnas y debe ser 
+cargada con elementos enteros seleccionados al azar.
+
+El programa debe tener un menú con las siguientes opciones:
+
+    1) Agregar Nodo
+    2) Eliminar Nodo
+    3) Eliminar Lista Recursivamente
+    4) Mostrar Lista Gráficamente
+    0) Salir
+--------------------------------------------------------------------------------
+NOTAS:
+-----
+
+    - El proyecto llevará el nombre << labo22axx-e1-t3 >> de manera excluyente.
+    - Al finalizar la evaluación comprimir la carpeta del proyecto con el mismo 
+      nombre y con extensión << .tar.gz >> en la carpeta raíz de su cuenta.
+--------------------------------------------------------------------------------
+EJEMPLO DE GRÁFICOS:
+-------------------
+ /*
+   Aplicación simple que usa Xlib, una ventana con un cuadrado negro en su interior
+ */
+
+#include <iostream>
+#include <X11/Xlib.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+using namespace std;
+
+ int main(void) {
+   Display  *d;
+   Window   w;
+   XEvent   e;
+   char     *msg = NULL;
+   int      s;
+
+    msg = (char *)malloc(sizeof(char) * 30);
+    memset(msg,'\0',30);
+    strcpy(msg,"Hola Mundo...!!!\0");
+
+                        /* abrir la conexión con el servidor gráfico*/
+   d = XOpenDisplay(NULL);
+   if (d == NULL) {
+     fprintf(stderr, "No se pudo conectar al servidor gráfico\n");
+     exit(1);
+   }
+
+   s = DefaultScreen(d);
+
+                        /* crea la ventana */
+   w = XCreateSimpleWindow(d, RootWindow(d, s), 10, 10, 300, 100, 1,
+                           BlackPixel(d, s), WhitePixel(d, s));
+
+                        /* selecciona la clase de eventos que interesan */
+   XSelectInput(d, w, ExposureMask | KeyPressMask | ButtonPressMask);
+
+                        /* muestra la ventana */
+   XMapWindow(d, w);
+
+                        /* lazo de eventos */
+   while (e.xbutton.button != 3) {
+     XNextEvent(d, &e);
+                        /* dibujar o redibujar la ventana */
+     if (e.type == Expose) {
+       XFillRectangle(d, w, DefaultGC(d, s), 20, 20, 10, 10);
+       XDrawString(d, w, DefaultGC(d, s), 50, 50, msg, strlen(msg));
+     }
+                        /* salir si se presionó una tecla */
+     if (e.type == KeyPress)
+       break;
+
+     /*if (e.type == ButtonPress)
+       break;*/
+
+       cout << e.type << " " << e.xbutton.button << endl;
+   }
+
+                        /* cerrar la conexión al servidor gráfico */
+   XCloseDisplay(d);
+
+   return 0;
+ }
+--------------------------------------------------------------------------------
+ 

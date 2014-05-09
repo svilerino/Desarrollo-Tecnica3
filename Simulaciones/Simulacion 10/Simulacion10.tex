@@ -1,0 +1,115 @@
+\documentclass[12pt,a4paper,titlepage,spanish]{article} 
+\usepackage{babel}
+\usepackage [T1]{fontenc}
+\usepackage [latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{array}
+\usepackage{cancel}
+%\usepackage{arcs}
+\usepackage[usenames,dvipsnames]{color}
+	  \oddsidemargin 0in
+      \textwidth 6.75in
+      \topmargin 0in
+      \textheight 10.0in
+      \parindent 0em
+      \parskip 2ex
+\usepackage{anysize}
+\marginsize{3cm}{2cm}{1.0cm}{1.0cm}
+\pagestyle{plain}
+\title{
+\begin{Large}
+ \begin{center}
+		\underline{Informe Simulaciones TP10: Método de transformada inversa} \\
+		\underline{Generación de números aleatorios con distribuciones no uniformes}\\
+		\underline{Curso: } 6to 1ra\\
+		\underline{Turno: } Noche\\
+		\underline{CPU: } Intel Core 2 Duo E6600\\
+      \end{center}
+\end{Large}
+}
+\author{Vileriño, Silvio}
+
+\begin{document}
+\maketitle
+\setcounter{page}{2}
+\tableofcontents
+\newpage
+
+\subsection{Introducción}
+En esta simulación se desarrolla el método de la transformada inversa para la generación de números aleatorios de distribución de probabilidad no uniforme utilizando la función o transformada inversa de la función de distribución.
+
+\begin{equation*}
+	\\Sea\left\lbrace
+	  \begin{array}{l}
+		\text{$ f(x) $ una función definida en el intervalo } [ \alpha, \beta ] \\
+		\text{$ x $ } \in \mathbb{R_a}  [ \alpha, \beta ]\\
+	  \end{array}
+	  \right.
+\end{equation*}
+Se desean generar $ K $ números aleatorios donde $ \alpha=1 $ , $ \beta=10 $ dando un intervalo $ [1, 10] $ con una función de distribución o reparto del tipo $ f(x)=\frac{1}{x} $, de forma que la distribución quede dada por $ f(x) $ y el
+histograma adquiera la siguiente forma:\\
+\begin{center}
+	\includegraphics[scale=0.75]{images/Distribucion-1x.JPG}
+\end{center}
+
+Se procede a calcular $ N $, que indica la cantidad de puntos en un intervalo(estadísticamente).
+\begin{center}
+ $ N=\int_\alpha^{\beta}\frac{1}{x} \: dx $
+\end{center} 
+Una vez calculado $ N $, se procede a calcular la función $ g(x) $, que no es más que la función $ f(x) $ normalizada por $ N $, lo cual nos da la probabilidad de aparición de $ x $ en el intervalo $ [ \alpha, \beta ] $ calculando $\int_\alpha^{\beta}g(x) \: dx  $\\
+Teniendo esto en cuenta, podemos obtener las siguientes deducciones:\\
+\begin{center}
+	$ \int_\alpha^{\beta}g(x) \: dx= \int_\alpha^{\beta}\frac{f(x)}{N} \: dx=p(x) $ Donde p es la probabilidad de aparición de x. $ x \in  [ \alpha, \beta ]  $
+\end{center} 
+Si acotamos el intervalo a $ [\alpha, \gamma] $, obtenemos $ \int_\alpha^{\gamma}g(x) \: dx= \int_\alpha^{\gamma}\frac{f(x)}{N} \: dx=p(x) $ Podemos manejar los intervalos según nos convenga pero esta ecuación siempre nos dará números
+en el intervalo $ [0,1] $ pudiendo establecer la siguiente igualdad:
+\begin{center}
+	$ \int_\alpha^{\gamma}g(x) \: dx=p(x)=Rnd $,  $ Rnd \in \mathbb{R_a} / 0 \leq Rnd \leq 1 $
+\end{center} 
+Entonces, si introducimos valores del intervalo $ [\alpha, \gamma] $ en $ p(x) $ obtenemos $ [0, 1] $.\\
+Esto implica que:\\
+\begin{center}
+	 $ p : [\alpha, \gamma] \longrightarrow [0, 1] $\\
+	 $ p ^{[-1]}: [0, 1] \longrightarrow [\alpha, X]  $
+\end{center} 
+Si ingresamos valores del intervalo $ [0, 1] $ en $ p^{[-1]} $ obtendremos un GNA con una distribución dada por $ f(x) $
+\begin{center}
+	$ x=p^{[-1]}(Rnd)$
+\end{center}
+\underline{Ejemplo Practico:}\\
+Función $ f(x)=\frac{1}{x} $\\\\
+Intervalo $ [\alpha, \beta ] = [0, 1] $\\\\
+Se calcula $ N= \int_\alpha^{\beta}\frac{1}{x} \: dx = \int_1^{10}\frac{1}{x} \: dx = \ln(10) - \ln(1) = \ln(\frac{10}{1})$\\\\
+$ N=\ln(10) $\\\\
+$ g(x)=\frac{\frac{1}{x}}{\ln(10)} = \frac{1}{x.\ln(10)} $\\\\
+$ \int_\alpha^{X}\frac{1}{x.\ln(10)} \: dx = \frac{1}{\ln(10)}.\ln(x) \left.\right|_{\alpha}^{X} $\\\\
+$ \ln(x)  \left.\right|_{\alpha}^{\gamma}= \ln(\gamma)-\ln(\alpha) =\ln(\frac{X}{\alpha}) $\\\\\\
+\begin{center}
+$ y= \frac{\ln(\frac{\gamma}{\alpha})}{\ln(10)} $\\
+$ y.\ln(10)=ln(\frac{\gamma}{\alpha}) $\\
+%$ e^{\ln(10).y=\frac{\gamma}{\alpha}} $\\
+$ \gamma= \alpha .e^{\ln(10).y} $ donde $ y=RND $\\
+\end{center}
+Función inversa final:
+\begin{center}
+\textcolor{green}{$ X=\alpha.e^{\ln(\gamma).x}$ donde $ x=RND $}
+\end{center}
+Luego de realizar la simulación, se obtuvieron los siguientes resultados: \\
+\begin{itemize}
+	\item Funcion $ f(x)=\frac{1}{x} $
+	\item Intervalo $ [1, 10] $
+	\item Cantidad de números generados : 1000000
+\end{itemize}
+\begin{center}
+	\includegraphics[scale=0.75]{images/Histograma.jpg}
+\end{center}
+\newpage
+\subsection{Conclusión}
+Se comprueba que por medio de este método se pueden obtener distribuciones en función de una tranformada cualquiera, en este caso $ f(x)=\frac{1}{x} $. Es un método interesante y útil, ya que se puede utilizar para alimentar simulaciones estocásticas con alguna tendencia en particular, lo cual amplía las posibilidades de investigación.
+\end{document}

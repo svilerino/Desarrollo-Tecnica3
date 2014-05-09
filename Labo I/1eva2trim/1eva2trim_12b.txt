@@ -1,0 +1,4 @@
+Evaluación: encontrar el mayor valor entero par, que se forma con los 4 primeros decimales de la raíz cuadrada de 2.
+Guardar la evaluación como "1eva2trim" en una carpeta del mismo nombre - Ponerle título en la solapa del form, y 
+agregar este enunciado a manera de comentario en el comienzo del código, junto a los datos del alumno.
+///

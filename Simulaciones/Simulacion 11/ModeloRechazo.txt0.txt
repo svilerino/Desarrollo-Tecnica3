@@ -1,0 +1,4 @@
+[300887, 176677, 124877, 97127, 79385, 66387, 57501, 51395, 45764, 0]
+Total Numeros Generados: 9007211
+Total Numeros Admitidos: 1000000
+Total Numeros Rechazados: 8007211

@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1255120138 source:/home/labo22a05/Trim3/labo22a05-tp00Herencia-t3/Punto.cpp
+	"Punto.h"
+
+1255120022 /home/labo22a05/Trim3/labo22a05-tp00Herencia-t3/Punto.h
+
+1255120574 source:/home/labo22a05/Trim3/labo22a05-tp00Herencia-t3/Punto3d.cpp
+	"Punto3d.h"
+
+1255120587 /home/labo22a05/Trim3/labo22a05-tp00Herencia-t3/Punto3d.h
+	"Punto.h"
+
+1256931867 source:/home/labo22a05/Trim3/labo22a05-tp00Herencia-t3/main.cpp
+	<iostream>
+	"Punto3d.h"
+

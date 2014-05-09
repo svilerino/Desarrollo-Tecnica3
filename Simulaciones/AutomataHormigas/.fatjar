@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Sun Nov 28 11:32:40 ART 2010
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=C\:\\Documents and Settings\\Silvio\\Escritorio\\AutomataHormigasDelay1MS25x25.jar
+manifest.mergeall=true
+manifest.mainclass=modelo.Automata
+manifest.file=<createnew>
+jarname.isextern=true
+onejar.expand=
+excludes=
+includes=

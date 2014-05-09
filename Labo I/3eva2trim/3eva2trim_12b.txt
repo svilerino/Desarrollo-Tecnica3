@@ -1,0 +1,6 @@
+Una matriz de 10*10 se llena al azar con 0 y 1. Asegurando que haya un 1 en el elemento (0,0), mostrar el recorrido
+de un bicho que camina por los 1. Se puede mover tanto en vertical como en horizontal y diagonal en cualquier sentido,
+pero nunca volver a atrás.
+Guardar la evaluación como 3eva2trim en carpeta del mismo nombre en el raíz de la cuenta del usuario - Poner datos
+del alumno y el enunciado del problema al principio del código y título en la solapa del Form.
+----------------------------------------------------------------------------------------------------
